@@ -1,0 +1,113 @@
+#!/bin/sh
+
+#functions
+def my_function():
+  print("Hello from a function")
+
+my_function()
+
+#if-else statements 
+a = 33
+b = 33
+if b > a:
+  print("b is greater than a")
+elif a == b:
+  print("a and b are equal")
+
+
+#elseif in shell scripting
+echo -n "Enter a number: "
+read num
+if [[ $num -gt 10 ]]
+then
+echo "Number is greater than 10."
+elif [[ $num -eq 10 ]]
+then
+echo "Number is equal to 10."
+else
+echo "Number is less than 10."
+fi
+
+#boolean
+echo -n "Enter Number:"
+read num
+if [[ ( $num -lt 10 ) && ( $num%2 -eq 0 ) ]]; then
+echo "Even Number"
+else
+echo "Odd Number"
+fi
+
+
+
+#while loop
+i=0
+while [ $i -le 5 ]
+do
+
+((i++))
+done
+
+
+#for loop
+p= 1 2 3 4 5 6 
+for i in p
+do
+sum=`expr $sum + $p`
+done
+echo $sum
+
+n=20
+echo $((n+=30))
+echo $((n-=30))
+echo $((n*=20))
+echo $((n/=10))
+echo $((n%=2))
+echo $((n**=2))
+
+#until loop
+a=1
+until [$a -ge 5]
+do
+echo $a
+a=`expr $a + 1`
+done
+
+#functions in shell scripting
+function Add()
+{
+echo -n "Enter a Number: "
+read x
+echo -n "Enter another Number: "
+read y
+echo "Adiition is: $(( x+y ))"
+}
+
+break statement 
+fruits = ["sachin", "tentulkar", "dhoni"]
+for x in fruits:
+  print(x)
+  if x == "tentulkar":
+    break
+
+
+#length of an array
+x = len(cars)
+
+
+#tuples 
+thistuple = ("apple", "banana", "cherry")
+print(thistuple)
+
+#lambda 
+x = lambda a : a + 10
+print(x(5))
+
+#data type 
+x = 5
+print(type(x))
+
+#variables
+x = 5
+y = "prasanna"
+print(x)
+print(y)
